@@ -1,0 +1,31 @@
+<ion-view view-title="">
+    <style>
+        #vedio .default-title{
+            display: none;
+        }
+        video.video-js{
+            width: 100%;
+        }
+    </style>
+    <script>
+        videojs.options.flash.swf= "../Vido/video-js.swf";
+    </script>
+    <ion-nav-bar class="bar-positive" id="vedio">
+        <ion-nav-back-button class="button button-clear ion-ios-undo">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+
+        <video id="really-cool-video" class="video-js vjs-default-skin" controls
+               preload="auto" width="640" height="264" poster="http://video-js.zencoder.com/oceans-clip.png"
+               data-setup='{}'>
+            <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+            <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+            <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
+            <!--<p class="vjs-no-js">
+                &lt;!&ndash;<a href="http://videojs.com/html5-video-support/" target="_blank"></a>&ndash;&gt;
+            </p>-->
+        </video>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view>
+    <ion-nav-bar class="bar-positive" id="local">
+        <ion-nav-back-button class="button button-clear ion-ios-undo">
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <p>
+            <button class="button button-calm" ng-click="getLocal()">getLocation</button>
+        </p>
+        <div class="row">
+            <div class="col-90">
+                <p id="lng">{{localData.pos}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

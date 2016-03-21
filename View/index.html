@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starter">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <!--<link rel="stylesheet" href="../Content/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../Css/index.css">
+    <style>
+        .ion-close-circled:before {
+            content: "\f128";
+            font-size: 24px;
+        }
+        .ion-ios-undo:before {
+            content: "\f4c7";
+            font-size: 24px;
+        }
+        .ion-android-add-circle:before {
+            content: "\f359";
+            font-size: 24px;
+        }
+        #more-menu{
+            position: relative;
+            transform:translate(0px,-100%);
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            height: 100px;
+            z-index: 10;
+            background: white;
+            opacity: 1;
+        }
+        .close-btn{
+            float: right;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        .more-btn.button::before{
+            transform:rotate(40deg);
+            -ms-transform: rotate(40deg);
+            -webkit-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+        }
+        .ion-android-add-circle.rotate-more-btn::before{
+            transition: all 700ms ease-out;
+            -webkit-transition: all 700ms ease-out;
+            -moz-transition: all 700ms ease-out;
+            -o-transition: all 700ms ease-out;
+            transform:rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+        }
+        .modal-bg{
+            -webkit-transition: opacity 300ms ease-in-out;
+            transition: opacity 300ms ease-in-out;
+            background-color: #000;
+            opacity: .5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index:0;
+            width: 100%;
+            height: 100%;
+        }
+       #more-menu .tabs{
+            border-color:inherit;
+             background-color: inherit;
+             background-image: none;
+           border-bottom-color: white;
+        }
+       #more-menu .tabs i{
+           height: 44px;
+           font-size: 30px;
+           width: 44px;
+           border-radius: 23%;
+       }
+        #more-menu .tabs-icon-one{
+            background-color: #F15151;
+        }
+        #more-menu .tabs-icon-two{
+            background-color: #F19251;
+        }
+       #more-menu .tabs i:before {
+           position: relative;
+           top: 36%;
+           color: white;
+           margin-top: -42px;
+        }
+        #more-menu .tabs-icon-three{
+            background-color: #51B8F1;
+        }
+        #more-menu .tabs-icon-four{
+            background-color: #6EDEB9;
+        }
+        #more-menu .tabs-icon-five{
+            background-color: #D66EDE;
+        }
+        .ion-close-circled:before {
+            color: gray;
+        }
+    </style>
+    <link rel="stylesheet" href="../Ionic/css/ionic.min.css">
+    <link rel="stylesheet" href="../Css/video-js.min.css">
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Vido/video.min.js"></script>
+    <script src="../Ionic/js/ionic.bundle.min.js"></script>
+
+    <!--<script src="../ng-cordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>-->
+    <!--<script src="../Js/commd/imgLoader.js"></script>-->
+    <script src="../Js/app.js"></script>
+    <script src="../Js/controller.js"></script>
+    <script src="../Js/service.js"></script>
+
+
+    <title>Title</title>
+
+</head>
+<body>
+
+<ion-nav-view></ion-nav-view>
+<script id="menu.html" type="text/ng-template">
+    <ion-nav-view name="menuContent"></ion-nav-view>
+</script>
+<!--<script id="home" type="text/ng-template">
+    <div ng-include="'home.html'"></div>
+</script>
+
+<script id="vido" type="text/ng-template">
+   <div ng-include="'vido.html'"></div>
+</script>
+<script id="svg" type="text/ng-template">
+    <div ng-include="'svg.html'"></div>
+</script>
+<script id="pic" type="text/ng-template">
+    <div ng-include="'pic.html'"></div>
+</script>
+<script id="local" type="text/ng-template">
+    <div ng-include="'local.html'"></div>
+</script>-->
+
+<script type="text/javascript">
+    /*window.addEventListener('load',function(){
+        console.log(window.applicationCache.status);
+    });*/
+</script>
+</body>
+</html>
