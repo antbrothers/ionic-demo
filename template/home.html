@@ -1,28 +1,131 @@
 <ion-view>
-<div class="bar bar-header bar-positive">
-    <button class="button button-clear ion-ios-undo"></button>
-    <h1 class="title">bar-positive</h1>
-    <button class="button button-clear ion-android-add-circle" ng-click="More()"></button>
-</div>
-<div id="more-menu">
-    <i class="ion-close-circled close-btn" ng-click="Close()"></i>
-    <div class="tabs tabs-top tabs-icon-top">
-        <a class="tab-item" href="#">
-            <i class="icon ion-home tabs-icon-one"></i>
-        </a>
-        <a class="tab-item" href="#/app/local">
-            <i class="icon ion-ios-navigate tabs-icon-two"></i>
-        </a>
-        <a class="tab-item" href="#/app/pic">
-            <i class="icon ion-image tabs-icon-three"></i>
-        </a>
-        <a class="tab-item" href="#/app/svg">
-            <i class="icon ion-gear-a tabs-icon-four"></i>
-        </a>
-        <a class="tab-item" href="#/app/vido">
-            <i class="icon ion-videocamera tabs-icon-five"></i>
-        </a>
+
+    <div class="bar bar-header bar-positive">
+        <button class="button button-clear ion-ios-undo"></button>
+        <h1 class="title">bar-positive</h1>
+        <button class="button button-clear ion-android-add-circle" ng-click="More()"></button>
     </div>
-</div>
-<div class="show-back"></div>
+    <!--菜单显示模块 begin-->
+    <div id="more-menu">
+        <i class="ion-close-circled close-btn" ng-click="Close()"></i>
+        <div class="tabs tabs-top tabs-icon-top">
+            <a class="tab-item" href="#">
+                <i class="icon ion-home tabs-icon-one"></i>
+            </a>
+            <a class="tab-item" href="#/app/local">
+                <i class="icon ion-ios-navigate tabs-icon-two"></i>
+            </a>
+            <a class="tab-item" href="#/app/pic">
+                <i class="icon ion-image tabs-icon-three"></i>
+            </a>
+            <a class="tab-item" href="#/app/svg">
+                <i class="icon ion-gear-a tabs-icon-four"></i>
+            </a>
+            <a class="tab-item" href="#/app/vido">
+                <i class="icon ion-videocamera tabs-icon-five"></i>
+            </a>
+        </div>
+    </div>
+    <div class="show-back"></div>
+    <!--菜单显示模块 end-->
+    <!-- 滑动导航 begin -->
+
+    <!-- 滑动导航 end   -->
+
+    <!--内容展示页  begin -->
+         <style>
+        #slide-cont {
+            top: -30px;
+            height:143px;
+            margin-bottom: -30px;
+        }
+        #slide-cont .slide-img{
+            width: 100%;
+        }
+        #slide-cont .title{
+            width: 100%;
+            font-size:.1rem;
+            line-height: 2rem;
+            color: #fff;
+            font-family: "\5fae\8f6f\96c5\9ed1";
+            position: absolute;
+            bottom: 6px;
+            padding: 0 0.3rem;
+            background: -moz-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+            background: -webkit-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+            background: linear-gradient(to bottom,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+        }
+        #slide-cont .slider-pager{
+            text-align: right;
+            bottom: 16px;
+            font-size: 10px;
+        }
+        #slide-cont .slider-pager .slider-pager-page{
+            color: white;
+            width: 8px;
+        }
+        #slide-cont .slider-pager .active{
+            color: red;
+        }
+
+
+        #list-cont{
+            top:69px;
+        }
+        #list-cont .item-thumbnail-left>img:first-child{
+            max-height: 60px;
+            max-width: 60px;
+        }
+        #list-cont .item-thumbnail-left{
+            padding-left: 79px;
+            min-height:81px;
+            height: 81px;
+        }
+        #list-cont .list-desc{
+            font-size: 12px;
+        }
+        #list-cont .list-title{
+            font-size: 14px;
+        }
+        #list-cont .list-commt{
+            float: right;
+        }
+
+    </style>
+        <ion-content id="list-cont">
+            <!--图片轮播模块 begin -->
+            <ion-slide-box id="slide-cont" class="slide-cont" does-continue="true" auto-play="true" show-pager="true" on-slide-changed="go_changed(index)" active-slide="index" pager-click="go(index)">
+                <ion-slide>
+                    <div class="box blue">
+                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img2.cache.netease.com/3g/2016/3/22/201603221428294fa73.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                        <span class="title">韩国高校洗足仪式 教授跪地给学生洗脚</span>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box yellow">
+                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img5.cache.netease.com/3g/2016/3/22/20160322070929b75eb.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box pink">
+                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img6.cache.netease.com/3g/2016/3/22/201603220822259185b.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <!--图片轮播模块 end   -->
+            <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+            <ion-list>
+                <ion-item ng-repeat="item in artists | filter:query" class="item-thumbnail-left item-text-wrap">
+                    <img ng-src="{{item.img}}" alt="{{item.name}} Photo" class="list-img">
+                    <h2 class="list-title">{{item.name | limitTo:12}}</h2>
+                    <h3>{{item.lastname}}</h3>
+                    <p class="list-desc">
+                        {{item.description | limitTo: 25}}{{item.description.length > 25 ? '&hellip;':''}}
+                        <!--<i class="ion-chatboxes"></i>-->
+                        <span class="ion-chatboxes list-commt">123跟帖</span>
+                    </p>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    <!--内容展示页  end   -->
 </ion-view>
