@@ -29,103 +29,181 @@
     <div class="show-back"></div>
     <!--菜单显示模块 end-->
     <!-- 滑动导航 begin -->
-
-    <!-- 滑动导航 end   -->
-
-    <!--内容展示页  begin -->
-         <style>
-        #slide-cont {
-            top: -30px;
-            height:143px;
-            margin-bottom: -30px;
-        }
-        #slide-cont .slide-img{
-            width: 100%;
-        }
-        #slide-cont .title{
-            width: 100%;
-            font-size:.1rem;
-            line-height: 2rem;
-            color: #fff;
-            font-family: "\5fae\8f6f\96c5\9ed1";
+    <style>
+        #sile_menu .slie-cont{
             position: absolute;
-            bottom: 6px;
-            padding: 0 0.3rem;
-            background: -moz-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
-            background: -webkit-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
-            background: linear-gradient(to bottom,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+            height: 70px;
+            top: 10px;
         }
-        #slide-cont .slider-pager{
-            text-align: right;
-            bottom: 16px;
-            font-size: 10px;
+        #sile_menu .down-more{
+            float: right;
+            right: 8px;
+            position: relative;
+            top: -59px;
+            transition: transform 1s;
+
         }
-        #slide-cont .slider-pager .slider-pager-page{
-            color: white;
-            width: 8px;
+        #sile_menu .down-more.ion-ios-arrow-down:before{
+            font-size: 32px;
+
         }
-        #slide-cont .slider-pager .active{
+         .slider_wrap.line {
+             width: 85%;
+             -webkit-overflow-scrolling: touch;
+             top: 38px;
+             position: relative;
+        }
+        .slider_wrap .u_c_items {
+            white-space: nowrap;
+        }
+        .slider_wrap.line .item_cell {
+            display: inline-block;
+            width: 8.6666%;
+        }
+        .u_c_items span {
+            color: #555;
+            margin: .25rem 0;
+            line-height: .32rem;
+            white-space: nowrap;
+            display: block;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            text-align: center;
+            cursor: pointer;
+        }
+        .u_c_items .current span{
             color: red;
         }
 
-
-        #list-cont{
-            top:69px;
-        }
-        #list-cont .item-thumbnail-left>img:first-child{
-            max-height: 60px;
-            max-width: 60px;
-        }
-        #list-cont .item-thumbnail-left{
-            padding-left: 79px;
-            min-height:81px;
-            height: 81px;
-        }
-        #list-cont .list-desc{
-            font-size: 12px;
-        }
-        #list-cont .list-title{
-            font-size: 14px;
-        }
-        #list-cont .list-commt{
-            float: right;
-        }
-
     </style>
-        <ion-content id="list-cont">
-            <!--图片轮播模块 begin -->
-            <ion-slide-box id="slide-cont" class="slide-cont" does-continue="true" auto-play="true" show-pager="true" on-slide-changed="go_changed(index)" active-slide="index" pager-click="go(index)">
-                <ion-slide>
-                    <div class="box blue">
-                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img2.cache.netease.com/3g/2016/3/22/201603221428294fa73.jpg&w=750&h=380&limit=0&fill=0&gif=1">
-                        <span class="title">韩国高校洗足仪式 教授跪地给学生洗脚</span>
+    <div id="sile_menu">
+        <div class="slie-cont" title="Home" hide-nav-bar="true">
+            <ion-scroll zooming="true" direction="x" style="width: 285px; height: 70px">
+                <div style="width: 500px; height: 5000px;">
+                    <div class="slider_wrap line">
+                        <div class="u_c_items">
+                            <div class="item_cell current" scroll-left="0" data-child="all" data-cnn="all"><span data-href="#/all">推荐</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">新闻</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">娱乐</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">体育</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">财经</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">军事</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">段子</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">时尚</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">手机</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">科技</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">游戏</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">数码</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">交友</span></div>
+                            <div class="item_cell" scroll-left="0" data-child="all" data-cnn="news"><span data-href="#/news">汽车</span></div>
+                        </div>
+
                     </div>
-                </ion-slide>
-                <ion-slide>
-                    <div class="box yellow">
-                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img5.cache.netease.com/3g/2016/3/22/20160322070929b75eb.jpg&w=750&h=380&limit=0&fill=0&gif=1">
-                    </div>
-                </ion-slide>
-                <ion-slide>
-                    <div class="box pink">
-                        <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img6.cache.netease.com/3g/2016/3/22/201603220822259185b.jpg&w=750&h=380&limit=0&fill=0&gif=1">
-                    </div>
-                </ion-slide>
-            </ion-slide-box>
-            <!--图片轮播模块 end   -->
-            <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
-            <ion-list>
-                <ion-item ng-repeat="item in artists | filter:query" class="item-thumbnail-left item-text-wrap">
-                    <img ng-src="{{item.img}}" alt="{{item.name}} Photo" class="list-img">
-                    <h2 class="list-title">{{item.name | limitTo:12}}</h2>
-                    <h3>{{item.lastname}}</h3>
-                    <p class="list-desc">
-                        {{item.description | limitTo: 25}}{{item.description.length > 25 ? '&hellip;':''}}
-                        <!--<i class="ion-chatboxes"></i>-->
-                        <span class="ion-chatboxes list-commt">123跟帖</span>
-                    </p>
-                </ion-item>
-            </ion-list>
+                </div>
+            </ion-scroll>
+        </div>
+        <i class="ion-ios-arrow-down down-more" ng-click="downMore()"></i>
+    </div>
+    <!--<div class="slie_menu_all">
+        <ion-content>
+
         </ion-content>
+    </div>-->
+    <!-- 滑动导航 end   -->
+
+    <!--内容展示页  begin -->
+    <style>
+                    #slide-cont {
+                        top: -30px;
+                        height:143px;
+                        margin-bottom: -30px;
+                    }
+                    #slide-cont .slide-img{
+                        width: 100%;
+                    }
+                    #slide-cont .title{
+                        width: 100%;
+                        font-size:.1rem;
+                        line-height: 2rem;
+                        color: #fff;
+                        font-family: "\5fae\8f6f\96c5\9ed1";
+                        position: absolute;
+                        bottom: 6px;
+                        padding: 0 0.3rem;
+                        background: -moz-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+                        background: -webkit-linear-gradient(top,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+                        background: linear-gradient(to bottom,rgba(0,0,0,0) 8%,rgba(0,0,0,0.24) 40%,rgba(0,0,0,0.29) 47%,rgba(0,0,0,0.65) 95%);
+                    }
+                    #slide-cont .slider-pager{
+                        text-align: right;
+                        bottom: 16px;
+                        font-size: 10px;
+                    }
+                    #slide-cont .slider-pager .slider-pager-page{
+                        color: white;
+                        width: 8px;
+                    }
+                    #slide-cont .slider-pager .active{
+                        color: red;
+                    }
+
+
+                    #list-cont{
+                        top:69px;
+                    }
+                    #list-cont .item-thumbnail-left>img:first-child{
+                        max-height: 60px;
+                        max-width: 60px;
+                    }
+                    #list-cont .item-thumbnail-left{
+                        padding-left: 79px;
+                        min-height:81px;
+                        height: 81px;
+                    }
+                    #list-cont .list-desc{
+                        font-size: 12px;
+                    }
+                    #list-cont .list-title{
+                        font-size: 14px;
+                    }
+                    #list-cont .list-commt{
+                        float: right;
+                    }
+
+                </style>
+    <ion-content id="list-cont">
+                    <!--图片轮播模块 begin -->
+                    <ion-slide-box id="slide-cont" class="slide-cont" does-continue="true" auto-play="true" show-pager="true" on-slide-changed="go_changed(index)" active-slide="index" pager-click="go(index)">
+                        <ion-slide>
+                            <div class="box blue">
+                                <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img2.cache.netease.com/3g/2016/3/22/201603221428294fa73.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                                <span class="title">韩国高校洗足仪式 教授跪地给学生洗脚</span>
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box yellow">
+                                <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img5.cache.netease.com/3g/2016/3/22/20160322070929b75eb.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                            </div>
+                        </ion-slide>
+                        <ion-slide>
+                            <div class="box pink">
+                                <img class="slide-img" src="http://oimagec3.ydstatic.com/image?url=http://img6.cache.netease.com/3g/2016/3/22/201603220822259185b.jpg&w=750&h=380&limit=0&fill=0&gif=1">
+                            </div>
+                        </ion-slide>
+                    </ion-slide-box>
+                    <!--图片轮播模块 end   -->
+                    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+                    <ion-list>
+                        <ion-item ng-repeat="item in artists | filter:query" class="item-thumbnail-left item-text-wrap">
+                            <img ng-src="{{item.img}}" alt="{{item.name}} Photo" class="list-img">
+                            <h2 class="list-title">{{item.name | limitTo:12}}</h2>
+                            <h3>{{item.lastname}}</h3>
+                            <p class="list-desc">
+                                {{item.description | limitTo: 25}}{{item.description.length > 25 ? '&hellip;':''}}
+                                <!--<i class="ion-chatboxes"></i>-->
+                                <span class="ion-chatboxes list-commt">123跟帖</span>
+                            </p>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
     <!--内容展示页  end   -->
 </ion-view>
