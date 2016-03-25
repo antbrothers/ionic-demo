@@ -96,6 +96,10 @@ myController.controller('PlaylistsCtrl',function($scope,$ionicSlideBoxDelegate,$
 
         $scope.$broadcast('scroll.refreshComplete');
     }
+
+    $scope.downMore=function(){
+        $('.down-more').css({'transform':'rotate(180deg)'})
+    }
 })
 myController.controller('vidoCtrl',function(){
     console.log('vidoCtrl');
@@ -121,4 +125,10 @@ myController.controller('localCtrl',function($scope){
             $scope.localData.pos="浏览器不支持geolocation"
         }
     }
+})
+myController.controller('advertCtrl',function(){
+    console.log('advertCtrl');
+})
+myController.controller('qmzgCtrl',function($scope){
+    console.log('amzg')
 })

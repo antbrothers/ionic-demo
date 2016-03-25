@@ -1,0 +1,76 @@
+<style>
+    #advert_js{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        background: url("../Images/adver/p1-bj.jpg");
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        -webkit-background-origin:content-box; /* Safari */
+        background-origin:content-box;
+    }
+    #advert_js .p_ms_js{
+        background: url("../Images/adver/p1-ms1.png");
+        background-repeat: no-repeat;
+        width: 321px;
+        height: 525px;
+        background-size: 100% 100%;
+    }
+    #advert_js .next_p_js{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -112px;
+        position: relative;
+    }
+   /* #advert .next_p img{
+        width: 139px;
+    }*/
+</style>
+<ion-view>
+    <ion-content id="advert_js">
+        <div class="p_ms_js"></div>
+    </ion-content>
+    <script>
+        showTime();
+        var t=0;
+        function showTime(){
+            t += 1;
+            switch (t){
+                case 1:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms1.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 2:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms2.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 3:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms3.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 4:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms4.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 5:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms5.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 6:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms6.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 7:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms7.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                case 8:
+                    $(".p_ms_js").css({'background':'url("../Images/adver/p1-ms8.png")','background-repeat':'no-repeat',width:'321px',height:'525px','background-size':'100% 100%'})
+                    break;
+                default:
+                    break;
+            }
+            if (t==5){
+                t=0;
+            }
+            setTimeout("showTime()",1000);
+        }
+
+    </script>
+</ion-view>

@@ -67,5 +67,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('app.advert',{
+            url:'/advert',
+            views:{
+                'menuContent':{
+                    templateUrl:'../template/advert.html',
+                    controller:'advertCtrl'
+                }
+            }
+        })
+        .state('app.advert.qmzg',{
+            url:'/qmzg',
+            views:{
+                'qmzg':{
+                    templateUrl:'../template/qmzg.html',
+                    controller:'qmzgCtrl'
+                }
+            }
+        })
     $urlRouterProvider.otherwise('/app/playlists');
 })

@@ -27,10 +27,13 @@
             -ms-transition: all .3s ease-out;
             -o-transition: all .3s ease-out;
             transition: all .3s ease-out;
-            height: 100px;
+            height: 172px;
             z-index: 10;
             background: white;
             opacity: 1;
+        }
+        #more-menu .tabs.tabs-icon-top{
+            height: 69px;
         }
         .close-btn{
             float: right;
@@ -126,6 +129,7 @@
 <ion-nav-view></ion-nav-view>
 <script id="menu.html" type="text/ng-template">
     <ion-nav-view name="menuContent"></ion-nav-view>
+    <!--<ion-nav-view name="qmzg"></ion-nav-view>-->
 </script>
 
 <!--<script id="home" type="text/ng-template">
@@ -145,10 +149,5 @@
     <div ng-include="'local.html'"></div>
 </script>-->
 
-<script type="text/javascript">
-    /*window.addEventListener('load',function(){
-        console.log(window.applicationCache.status);
-    });*/
-</script>
 </body>
 </html>
